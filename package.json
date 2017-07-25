@@ -1,6 +1,6 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
+  "name": "gff-starter-theme",
+  "version": "2.0.0",
   "description": "Portfolio website",
   "main": "gulpfile.js",
   "scripts": {
@@ -23,5 +23,19 @@
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
     "jshint": "^2.9.5"
-  }
+  },
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lowkeydev/gff-starter.git"
+  },
+  "keywords": [
+    "gff"
+  ],
+  "bugs": {
+    "url": "https://github.com/lowkeydev/gff-starter/issues"
+  },
+  "homepage": "https://github.com/lowkeydev/gff-starter#readme"
 }
