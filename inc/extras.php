@@ -249,3 +249,6 @@ return '';
 add_filter('the_generator', 'wpbeginner_remove_version');
 
 add_filter('login_errors',create_function('$a', "return null;"));
+
+
+

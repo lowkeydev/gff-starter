@@ -893,6 +893,77 @@ text-transform:uppercase;
 # Slide Out Form
 --------------------------------------------------------------*/
 
+.quick-contact {
+    /*background: url(../images/icon/phone.png) 97% center no-repeat, #de0000;*/
+       border-radius: 10px 10px 0 0;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+     
+    height: 50px;
+    line-height: 30px;
+    margin: 180px 0 0 -157px;
+    position: absolute;
+    text-align: center;
+  -webkit-transform: rotate(-90deg);  
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+    width: 220px;
+    padding-right: 36px;
+    padding-top: 10px;
+    top: 0px;
+
+}
+
+.pos-fix.envelop .quick-contact{ background:/*url(../images/icon/envelop-icon.png) 97% center no-repeat,*/ #de0000; }
+.pos-fix.calls .quick-contact{
+width:175px;
+margin: 75px 0 0 -138px;
+background: /*url(../images/icon/phone.png) 97% center no-repeat,*/ #de0000;
+}
+
+.pos-fix {
+    background:#7d7d7d;
+    box-sizing: border-box;
+    height: auto;
+    padding: 25px;
+   z-index: 999999999 !important;
+    position: fixed;
+    right: -250px;
+    top: 10%;
+    transition: right 0.5s ease 0s;
+    width: 250px;
+    z-index: 999;
+	color:#fff;
+}
+.pos-fix.calls {
+	top:10%;
+}
+.quick-slide {
+    right: 0;
+    transition: right 0.5s ease 0s;
+}
+.pos-fix i {
+    font-size: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 20px;
+}
+.pos-fix a {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.pos-fix .read_more {
+    text-align: center;
+}
+.pos-fix .read_more a {
+    width: auto;
+}
+/**/
+
+
 .cd-main-content {
   position: fixed;
     right: 0px;

@@ -3,7 +3,33 @@
  * Register custom widgets and areas here
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ 
+ 
+ 
  */
+
+
+add_action( 'widgets_init', 'register_my_widgets' );
+
+
+function register_my_widgets() {
+   
+    register_widget( 'My_Text_Widget' );
+}
+
+class My_Text_Widget extends WP_Widget_Text {
+    function widget( $args, $instance ) {
+        extract($args);
+        $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
+        $text = apply_filters( 'widget_text', empty( $instance['text'] ) ? '' : $instance['text'], $instance );
+        echo $before_widget;
+        if ( !empty( $title ) ) { echo $before_title . $title . $after_title; } ?>
+            <?php echo !empty( $instance['filter'] ) ? wpautop( $text ) : $text; ?>
+        <?php
+        echo $after_widget;
+    }
+}
+
 function gff_starter_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'gff-starter' ),
@@ -20,8 +46,8 @@ function gff_starter_widgets_init() {
 		'id'            => 'header-widget-1',
 		'class'         => 'header-widget-section',
 		'description'   => esc_html__( 'Widget Area for Global Header.', 'gff-starter' ),
-		'before_widget' => '<section id="%1$s" class="widget header-widget row %2$s">',
-		'after_widget'  => '</section>',
+		'before_widget' => '',
+		'after_widget'  => '',
 		'before_title'  => '<h2 class="widget-title header-widget-title">',
 		'after_title'   => '</h2>',
 	) );
@@ -716,9 +742,9 @@ $ci_class = isset($instance['ci_class'] ) ?  esc_attr( $instance['ci_class'] ) :
 
 function gff_widgets_init() {
 	register_widget('GFF_contact_info');
-	register_widget('GFF_social_icons');
-    register_widget( 'GFF_Custom_Block' );
+	/*register_widget('GFF_social_icons');*/
+    /*register_widget( 'GFF_Custom_Block' );*/
 	register_widget('WP_Nav_Menu_With_Class');
-	 register_widget( 'GFF_FA_slideout' );
+	 /**register_widget( 'GFF_FA_slideout' );*/
 }
 add_action( 'widgets_init', 'gff_widgets_init' );

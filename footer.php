@@ -31,55 +31,21 @@
 
 
 <!-- CSS slideout form --> 
-     <?php if (is_active_sidebar('slideout-widget')) {
-     ?>
-     <?php dynamic_sidebar('slideout-widget');?>
    
- <?php
-     }
- ?>  
 
-<script type="text/javascript">jQuery(document).ready(function($){
-	//open the lateral panel
-	$('.cd-btn').on('click', function(event){
-		event.preventDefault();
-		$('.cd-panel').addClass('is-visible');
-	});
-	//clode the lateral panel
-	$('.cd-panel').on('click', function(event){
-		if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close') ) { 
-			$('.cd-panel').removeClass('is-visible');
-			event.preventDefault();
-		}
-	});
-});</script>
+    <div class="pos-fix envelop">
+	<div class="quick-contact grow">
+        FREE ESTIMATE!
+    </div>
+  <a href="tel:2148381125"><h3 style="color: #fff; text-align: center;">Call Now: <br>(214) 838-1125</h3></a><hr>
+	  
+     
+   
+
+</div>
 
 
-<script>
-	$(function(){
-		$('#menu').slicknav();
-	});
-</script>
-<script>
-$(function() {
- $("img.lazy").lazyload({
-    effect : "fadeIn",
-	effectspeed: 1000,
-});
-});
-
-</script>
-<script>
-$(function() {$(".global-widgets, .entry-content, .entry-header").flowtype({
-   minimum   : 360,
-   maximum   : 1500,
-   minFont   : 13,
-   maxFont   : 18,
-   fontRatio : 30
-});});
-
-</script>
 <?php wp_footer(); ?>
-<?php the_field('google_code', 'option');?>
+
 </body>
 </html>

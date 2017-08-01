@@ -81,6 +81,6 @@ $(function() {$(".global-widgets, .entry-content, .entry-header").flowtype({
 
 </script>
 <?php wp_footer(); ?>
-<?php the_field('google_code', 'option');?>
+
 </body>
 </html>

@@ -95,7 +95,13 @@ wp_enqueue_style( 'gff-starter-flexbox-grid',get_stylesheet_directory_uri()  . '
 wp_enqueue_style( 'gff-starter-responsive-menu-css', get_stylesheet_directory_uri()  . '/css/slicknav.css', array(), '20151215' );
 wp_enqueue_style( 'gff-starter-slider-css', get_stylesheet_directory_uri()  . '/css/slick.css', array(), '20151215' );
 wp_enqueue_style( 'gff-starter-font-awesome', get_stylesheet_directory_uri()  . '/css/font-awesome.css', array(), '1.0' );
-wp_enqueue_script( 'visual-anxiety-js', get_template_directory_uri() . '/js/app.min.js', array(), '20151215', true);
+wp_enqueue_script( 'gff-starter-slick-slider-init', get_template_directory_uri() . '/js/slick-init.js', array(), '20151215', true );
+wp_enqueue_script( 'gff-starter-slick-slider', get_template_directory_uri() . '/js/slick.js', array(), '20151215', true );
+wp_enqueue_script( 'gff-starter-lazyload', get_template_directory_uri() . '/js/jquery.lazyload.min.js', array(), '20151215', true );
+wp_enqueue_script( 'gff-starter-flowtype', get_template_directory_uri() . '/js/flowtype.js', array(), '20151215', true );
+wp_enqueue_script( 'gff-starter-responsive-menu', get_template_directory_uri() . '/js/jquery.slicknav.js', array(), '20151215', true );
+wp_enqueue_script( 'gff-starter-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -129,19 +135,13 @@ function load_external_jQuery() {
     wp_enqueue_script('jquery');
 }
 
- 
-/**
- * Auto Include ACF in theme
- */
-
-
 // 1. customize ACF path
 add_filter('acf/settings/path', 'my_acf_settings_path');
  
 function my_acf_settings_path( $path ) {
  
     // update path
-    $path = get_stylesheet_directory() . '/plugins/acf/assets/css/';
+    $path = get_stylesheet_directory() . '/plugins/acf/';
     
     // return
     return $path;
@@ -155,7 +155,7 @@ add_filter('acf/settings/dir', 'my_acf_settings_dir');
 function my_acf_settings_dir( $dir ) {
  
     // update path
-    $dir = get_stylesheet_directory_uri() . '/plugins/acf/assets/css/';
+    $dir = get_stylesheet_directory_uri() . '/plugins/acf/';
     
     // return
     return $dir;
@@ -164,12 +164,11 @@ function my_acf_settings_dir( $dir ) {
  
 
 // 3. Hide ACF field group menu item
-add_filter('acf/settings/show_admin', '__return_false');
+add_filter('acf/settings/show_admin', '__return_true');
 
 
 // 4. Include ACF
 include_once( get_stylesheet_directory() . '/plugins/acf/acf.php' );
-
 
 
 /**
@@ -201,4 +200,9 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load custom widgets and widget areas.
  */
 require get_template_directory() . '/inc/widgets.php';
+
+/**
+ * Load custom ACF fields
+ */
+require get_template_directory() . '/inc/fields.php';
 
