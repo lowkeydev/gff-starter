@@ -23,6 +23,7 @@ add_action ('wp_head','gff_header_code');
 
 function gff_footer_code() {
 	the_field('footer_code', 'option');
+	the_field('page_code');
 }	
 add_action ('wp_footer','gff_footer_code');	
 	
@@ -322,97 +323,7 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
-acf_add_local_field_group(array (
-	'key' => 'group_58924472a3dd5',
-	'title' => 'Individual Page Code',
-	'fields' => array (
-		array (
-			'key' => 'field_58924478b1167',
-			'label' => 'Page Code',
-			'name' => 'page_code',
-			'type' => 'textarea',
-			'instructions' => 'Place Google code here for individual pages. Google code is called before </body> tag.',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'new_lines' => '',
-			'maxlength' => '',
-			'placeholder' => '',
-			'rows' => '',
-		),
-	),
-	'location' => array (
-		array (
-			array (
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'page',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => 1,
-	'description' => 'Places a field to add code to individual pages.',
-));
 
-acf_add_local_field_group(array (
-	'key' => 'group_586d6e7c8ba8f',
-	'title' => 'Slider',
-	'fields' => array (
-		array (
-			'key' => 'field_586d6e85ef725',
-			'label' => 'Slider Portfolio',
-			'name' => 'slider_portfolio',
-			'type' => 'gallery',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'library' => 'all',
-			'min' => '',
-			'max' => '',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-			'insert' => 'append',
-		),
-	),
-	'location' => array (
-		array (
-			array (
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'page',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => 1,
-	'description' => 'Slider created with slick.js.',
-));
 
 acf_add_local_field_group(array (
 	'key' => 'group_58920b2604638',

@@ -18,7 +18,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
      <!--Slider function-->  <?php 
 
-$images = get_field('slider_portfolio');
+$images = get_field('slider');
 
 if( $images ): ?>
 <div class="slider" >        <?php foreach( $images as $image ): ?>
