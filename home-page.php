@@ -43,6 +43,39 @@ if( $images ): ?>
 			?>
 			</div>
 		</main><!-- #main -->
+		
+		
+		<!-- Custom Fields -->
+		
+		<?php
+
+// check if the flexible content field has rows of data
+if( have_rows('page_builder') ):
+
+     // loop through the rows of data
+    while ( have_rows('page_builder') ) : the_row();
+
+        if( get_row_layout() == 'fullwidth' ):?>
+
+        	<div class="container"><div class="row"><div class="col-lg-12 col-md-12 col-sm-12"><?php the_sub_field('fullwidth_text');
+				?></div><?php
+    elseif ( get_row_layout() == 'two_columns'):?>
+				<div class="container"><div class="row"><div class="col-lg-6 col-md-6 col-sm-6"><?php the_sub_field('left_column');?></div>
+					<div class="col-lg-6 col-md-6 col-sm-6"><?php the_sub_field('right_column');?></div></div></div> <?php
+
+        endif;
+
+    endwhile;
+
+else :
+
+    // no layouts found
+
+endif;
+
+?>
+		
+		
 	</div><!-- #primary -->
 
 <?php

@@ -13,11 +13,7 @@
 
 	</div><!-- #content -->
     <!-- Global widget sections -->
-<section class="global-widget1 global-widgets"><div class="container"><div class="row"><?php dynamic_sidebar('global-widget-1');?></div></div></section>
-<section class="global-widget2 global-widgets"><div class="container"><div class="row"><?php dynamic_sidebar('global-widget-2');?></div></div></section>
-<section class="global-widget3 global-widgets"><div class="container"><div class="row"><?php dynamic_sidebar('global-widget-3');?></div></div></section>
-<section class="global-widget4 global-widgets"><div class="container"><div class="row"><?php dynamic_sidebar('global-widget-4');?></div></div></section>
-<section class="global-widget5 global-widgets"><div class="container"><div class="row"><?php dynamic_sidebar('global-widget-5');?></div></div></section>
+<section class="container-fluid global-cta-banner"><div class="row"><div class="container"><?php dynamic_sidebar('global-cta');?></div></div></section>
 	<footer id="colophon" class="site-footer " role="contentinfo">
     <div class="container">
 		<div class="site-info">
@@ -30,15 +26,16 @@
 </div><!-- #page -->
 
 
-<!-- CSS slideout form --> 
+<!-- slideout form --> 
    
 
     <div class="pos-fix envelop">
 	<div class="quick-contact grow">
-        FREE ESTIMATE!
+       
+       FREE ESTIMATE!
     </div>
-  <a href="tel:2148381125"><h3 style="color: #fff; text-align: center;">Call Now: <br>(214) 838-1125</h3></a><hr>
-	  
+   <!--Don't remove this, needed for GFF backend -->
+	   <?php dynamic_sidebar('slideout-widget');?>
      
    
 

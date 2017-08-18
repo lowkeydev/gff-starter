@@ -51,66 +51,17 @@ function gff_starter_widgets_init() {
 		'before_title'  => '<h2 class="widget-title header-widget-title">',
 		'after_title'   => '</h2>',
 	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Slider', 'gff-starter' ),
-		'id'            => 'slider-widget-1',
-		'class'         => 'slider-widget-section1',
-		'description'   => esc_html__( 'Widget Area for Slider.', 'gff-starter' ),
-		'before_widget' => '<section id="%1$s" class="widget slider-widget row %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title slider-widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Global Section 1', 'gff-starter' ),
-		'id'            => 'global-widget-1',
-		'class'         => 'global-widget-section1',
-		'description'   => esc_html__( 'Global widget section under main content 1.', 'gff-starter' ),
-		'before_widget' => '<section id="%1$s" class="widget global-section1-widget row %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title global-section1-widget-title">',
-		'after_title'   => '</h2>',
-	) );
 		register_sidebar( array(
-		'name'          => esc_html__( 'Global Section 2', 'gff-starter' ),
-		'id'            => 'global-widget-2',
-		'class'         => 'global-widget-section2',
-		'description'   => esc_html__( 'Global widget section under main content 2.', 'gff-starter' ),
-		'before_widget' => '<section id="%1$s" class="widget global-section2-widget row %2$s">',
+		'name'          => esc_html__( 'Global Call to Action', 'gff-starter' ),
+		'id'            => 'global-cta',
+		'class'         => 'global-widget-cta',
+		'description'   => esc_html__( 'Global call to action banner.', 'gff-starter' ),
+		'before_widget' => '<section id="%1$s" class="widget global-cta-widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title global-section2-widget-title">',
+		'before_title'  => '<h2 class="widget-title global-cta-widget-title">',
 		'after_title'   => '</h2>',
 	) );
-		register_sidebar( array(
-		'name'          => esc_html__( 'Global Section 3', 'gff-starter' ),
-		'id'            => 'global-widget-3',
-		'class'         => 'global-widget-section3',
-		'description'   => esc_html__( 'Global widget section under main content 3.', 'gff-starter' ),
-		'before_widget' => '<section id="%1$s" class="widget global-section3-widget row %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title global-section3-widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Global Section 4', 'gff-starter' ),
-		'id'            => 'global-widget-4',
-		'class'         => 'global-widget-section4',
-		'description'   => esc_html__( 'Global widget section under main content 4.', 'gff-starter' ),
-		'before_widget' => '<section id="%1$s" class="widget global-section4-widget row %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title global-section4-widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Global Section 5', 'gff-starter' ),
-		'id'            => 'global-widget-5',
-		'class'         => 'global-widget-section5',
-		'description'   => esc_html__( 'Global widget section under main content 5.', 'gff-starter' ),
-		'before_widget' => '<section id="%1$s" class="widget global-section5-widget row %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title global-section5-widget-title">',
-		'after_title'   => '</h2>',
-	) );
+	
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer', 'gff-starter' ),
 		'id'            => 'footer-widget-1',

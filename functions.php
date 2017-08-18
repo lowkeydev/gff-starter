@@ -90,8 +90,8 @@ add_action( 'after_setup_theme', 'gff_starter_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function gff_starter_scripts() {
-wp_enqueue_style( 'gff-starter-style', get_stylesheet_directory_uri() . '/style.css', array(), '20151215' );
-wp_enqueue_style( 'gff-starter-flexbox-grid',get_stylesheet_directory_uri()  . '/css/flexboxgrid.css', array(), '20151215' );
+wp_enqueue_style( 'gff-starter-style', get_stylesheet_directory_uri() . '/css/style.css', array(), '20151215' );
+wp_enqueue_style( 'gff-starter-bootstrap4',get_stylesheet_directory_uri()  . '/css/bootstrap4.css', array(), '20151215' );
 wp_enqueue_style( 'gff-starter-responsive-menu-css', get_stylesheet_directory_uri()  . '/css/slicknav.css', array(), '20151215' );
 wp_enqueue_style( 'gff-starter-slider-css', get_stylesheet_directory_uri()  . '/css/slick.css', array(), '20151215' );
 wp_enqueue_style( 'gff-starter-font-awesome', get_stylesheet_directory_uri()  . '/css/font-awesome.css', array(), '1.0' );
