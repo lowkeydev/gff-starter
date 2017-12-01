@@ -1,4 +1,4 @@
-jQuery(document).ready(function($){
+<script type="application/javascript"> jQuery(document).ready(function($){
      $('.slider').slick({
    
   dots: true,
@@ -38,17 +38,11 @@ jQuery(document).ready(function() {
 });
 
 
-jQuery(document).ready(function() {$(".global-widgets, .entry-content, .entry-header").flowtype({
-   minimum   : 360,
-   maximum   : 1500,
-   minFont   : 13,
-   maxFont   : 18,
-   fontRatio : 30
-});});
 
 
-$(function() {$(".quick-contact").on("click", function(){
-	$(this).parent().toggleClass("quick-slide");
+
+jQuery(function() {$(".quick-contact").on("click", function(){
+	jQuery(this).parent().toggleClass("quick-slide");
 });
 	});
-
+</script>

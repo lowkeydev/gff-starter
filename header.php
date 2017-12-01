@@ -33,7 +33,17 @@
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 		
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'menu', 'container' => 'div', 'container_class' => 'container' ) ); ?><!-- menu_id must = menu for slicknav mobile menu to work -->
+			<?php wp_nav_menu( array(
+	'menu' => 'Main Menu',
+	'theme_location' => 'menu-1',
+	'menu_id' => 'menu',
+	'depth' => 3,
+	'container'         => 'div',
+	'container_class'   => 'container',
+	'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+	'walker'            => /*important for dropdown effect */new wp_bootstrap_navwalker()));?>
+			
+			
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
  

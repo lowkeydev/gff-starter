@@ -35,7 +35,7 @@ gulp.task('sass', function() {
 
 // JavaScript
 gulp.task('js', function() {
-  return gulp.src(['./js/*.js'])
+  return gulp.src(['./js/jquery.lazyload.min.js/','./js/jquery.slicknav.js/','./js/slick.js/'])
   .pipe(jshint())
   .pipe(jshint.reporter('default'))
   .pipe(concat('app.js'))

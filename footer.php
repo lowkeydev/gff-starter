@@ -1,3 +1,4 @@
+
 <?php
 /**
  * The template for displaying the footer
@@ -44,5 +45,55 @@
 
 <?php wp_footer(); ?>
 
+<!-- Important scripts for function, do not remove -->
+<script>
+	
+	//Slider 
+	jQuery(document).ready(function($){
+     $('.slider').slick({
+   
+  dots: true,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  cssEase: 'linear',
+   autoplay: true,
+   arrows: true,
+  autoplaySpeed: 2000,
+});
+});
+
+
+jQuery(document).ready(function($){
+     $('.slideshow').slick({
+dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  centerMode: true,
+  arrows: true,
+  adaptiveHeight: true,
+});
+});
+
+//Mobile Menu
+	jQuery(document).ready(function(){
+		$('#menu').slicknav();
+	});
+//Lazy Load
+jQuery(document).ready(function() {
+ $("img.lazy").lazyload({
+    effect : "fadeIn",
+	effectspeed: 1000,
+});
+});
+
+
+//Slideout Form
+
+jQuery(function() {$(".quick-contact").on("click", function(){
+	jQuery(this).parent().toggleClass("quick-slide");
+});
+				  });</script>
 </body>
 </html>
