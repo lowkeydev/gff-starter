@@ -41,16 +41,16 @@ function gff_starter_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Header', 'gff-starter' ),
-		'id'            => 'header-widget-1',
-		'class'         => 'header-widget-section',
-		'description'   => esc_html__( 'Widget Area for Global Header.', 'gff-starter' ),
-		'before_widget' => '',
-		'after_widget'  => '',
-		'before_title'  => '<h2 class="widget-title header-widget-title">',
-		'after_title'   => '</h2>',
-	) );
+	//register_sidebar( array(
+		//'name'          => esc_html__( 'Globah Header Code', 'gff-starter' ),
+		//'id'            => 'header-widget-1',
+		//'class'         => 'header-widget-section',
+		//'description'   => esc_html__( 'Widget Area for Global Header.', 'gff-starter' ),
+		//'before_widget' => '',
+		//'after_widget'  => '',
+		//'before_title'  => '<h2 class="widget-title header-widget-title">',
+		//'after_title'   => '</h2>',
+	//) );
 		register_sidebar( array(
 		'name'          => esc_html__( 'Global Call to Action', 'gff-starter' ),
 		'id'            => 'global-cta',
@@ -62,16 +62,16 @@ function gff_starter_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer', 'gff-starter' ),
-		'id'            => 'footer-widget-1',
-		'class'         => 'footer-widget-section1',
-		'description'   => esc_html__( 'Widget Area for Global Footer.', 'gff-starter' ),
-		'before_widget' => '<section id="%1$s" class="widget footer-widget row %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title footer-widget-title">',
-		'after_title'   => '</h2>',
-	) );
+	//register_sidebar( array(
+		//'name'          => esc_html__( 'Global Footer Code', 'gff-starter' ),
+		//'id'            => 'footer-widget-1',
+		//'class'         => 'footer-widget-section1',
+		//'description'   => esc_html__( 'Widget Area for Global Footer.', 'gff-starter' ),
+		//'before_widget' => '<section id="%1$s" class="widget footer-widget row %2$s">',
+		//'after_widget'  => '</section>',
+		//'before_title'  => '<h2 class="widget-title footer-widget-title">',
+		//'after_title'   => '</h2>',
+	//) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'Copyright', 'gff-starter' ),
 		'id'            => 'copyright-widget',

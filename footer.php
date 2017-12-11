@@ -18,8 +18,8 @@
 	<footer id="colophon" class="site-footer " role="contentinfo">
     <div class="container">
 		<div class="site-info">
-			<div class="row"><?php dynamic_sidebar('footer-widget-1');?></div>
-            <div class="row"><?php dynamic_sidebar('copyright-widget');?></div>
+			<div class="row"><?php the_field('global_footer_content','option');?></div>
+            <div class="row"><?php the_field('global_copyright','option');?></div>
         
 		</div><!-- .site-info -->
         </div><!-- .container -->
@@ -44,38 +44,28 @@
 
 
 <?php wp_footer(); ?>
-
+<?php the_field('global_footer_codes');?>
 <!-- Important scripts for function, do not remove -->
 <script>
 	
-	//Slider 
-	jQuery(document).ready(function($){
-     $('.slider').slick({
-   
-  dots: true,
-  infinite: true,
-  speed: 500,
-  fade: true,
-  cssEase: 'linear',
-   autoplay: true,
-   arrows: true,
-  autoplaySpeed: 2000,
+	$(document).ready(function () {
+  $('.slider').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    dots: true,
+    draggable: false,
+    fade: true,
+    speed: 1000
+  });
+  
+  $('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    $(slick.$slides).removeClass('is-animating');
+  });
+  
+  $('.slider').on('afterChange', function(event, slick, currentSlide, nextSlide) {
+    $(slick.$slides.get(currentSlide)).addClass('is-animating');
+  });
 });
-});
-
-
-jQuery(document).ready(function($){
-     $('.slideshow').slick({
-dots: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  centerMode: true,
-  arrows: true,
-  adaptiveHeight: true,
-});
-});
-
 //Mobile Menu
 	jQuery(document).ready(function(){
 		$('#menu').slicknav();

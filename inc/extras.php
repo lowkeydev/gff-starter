@@ -91,9 +91,15 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'Theme Settings',
 		'menu_slug' 	=> 'theme-general-settings',
 		'capability'	=> 'edit_posts',
-		'redirect'		=> false));
+		'redirect'		=> true,
+	'position'			=> '34'));
 	
-		
+		acf_add_options_sub_page(array(
+		'page_title' 	=> 'Global Header and Footer Codes',
+		'menu_title'	=> 'Global Content and Codes',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+	
 		acf_add_options_sub_page(array(
 		'page_title' 	=> 'Social Media Settings',
 		'menu_title'	=> 'Social Media',
@@ -101,11 +107,12 @@ if( function_exists('acf_add_options_page') ) {
 	));
 	
 		acf_add_options_sub_page(array(
-		'page_title' 	=> 'RAD & SEO Settings',
-		'menu_title'	=> 'RAD & SEO',
+		'page_title' 	=> 'Testimonials',
+		'menu_title'	=> 'Testimonials',
 		'parent_slug'	=> 'theme-general-settings',
 	));
 	
+		
 }
 
  

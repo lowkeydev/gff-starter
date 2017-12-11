@@ -17,7 +17,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 <?php wp_head(); ?>
-
+<!-- ACF field for header codes, do not remove--><?php the_field('global_header_codes','option');?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -27,8 +27,9 @@
 	<header id="masthead" class="site-header " role="banner">
     
 		<div class="container"><div class="site-branding row">
-      <!-- Widget header code containing logos, CTA, etc. --> 
-	  <?php dynamic_sidebar('header-widget-1');?>
+      
+	 <!--ACF field for global header content, do not remove--><?php the_field('global_header_content','option');?>
+			
 		</div></div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
